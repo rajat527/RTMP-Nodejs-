@@ -65,3 +65,33 @@ Navigate to the directory where you have the NGINX source code.
 Run the following command to configure NGINX with the RTMP module:  "  ./configure --with-http_ssl_module --add-module=/path/to/nginx-rtmp-module"
 Replace /path/to/nginx-rtmp-module with the path to the downloaded RTMP module.
 After configuration, run the following command to compile NGINX: ""
+
+
+
+
+
+
+
+
+#Event loop
+In JavaScript, the concepts of call stack, task queue, web API, and event loop are related to how the JavaScript engine handles asynchronous operations. Let's explore each of these concepts:
+
+Call Stack:
+The call stack is a mechanism used by JavaScript to keep track of function calls. Whenever a function is called, a new frame is pushed onto the stack, representing that function's execution context. The stack operates in a Last-In-First-Out (LIFO) order, meaning that the most recently pushed function is the first to be executed and popped off the stack when it completes.
+
+Task Queue:
+The task queue (also known as the "callback queue" or "message queue") is a data structure that holds tasks or functions to be executed asynchronously. When an asynchronous operation, such as a timer or an event listener, completes or triggers an event, the associated callback function is placed in the task queue.
+
+Web API:
+Web APIs are provided by web browsers to interact with various web-related functionalities, such as making HTTP requests, manipulating the DOM, or accessing the browser's storage. These APIs are not part of the JavaScript language itself but are accessible through JavaScript code. Examples of web APIs include XMLHttpRequest, Fetch API, setTimeout, setInterval, and many more.
+
+Event Loop:
+The event loop is responsible for managing the execution order of code in JavaScript. It continuously checks the call stack and task queue. If the call stack is empty, it takes the first task from the task queue and pushes it onto the call stack for execution. This process is repeated, allowing asynchronous tasks to be processed when the call stack is clear. This mechanism ensures that JavaScript remains non-blocking and can handle concurrent operations.
+
+In summary, the call stack keeps track of function calls and their execution order, the task queue holds asynchronous tasks, web APIs provide additional functionalities beyond the JavaScript language, and the event loop manages the execution of tasks in a non-blocking manner. Together, they enable JavaScript to handle asynchronous operations effectively.
+
+
+
+
+
+
